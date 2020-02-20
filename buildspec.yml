@@ -3,7 +3,8 @@ phases:
   pre_build:
     commands:
       - echo "entered the pre-build phase, building zip file"
-      - ~/scripts/dist.sh
+      - chmod +x scripts/dist.sh && scripts/dist.sh
+      - echo "fin commands"
   build:
     commands:
       - echo "Entered the build phase, installing dependencies"
