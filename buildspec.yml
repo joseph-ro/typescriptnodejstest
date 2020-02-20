@@ -12,6 +12,5 @@ phases:
   post_build:
     commands:
       - echo "Entered the post-build phase, proceeding to deploy the artifact"
-      - npm run build
 deploy:
-  artifacts: dist/pipelinetest.zip
+  artifacts: dist/aws-eb-typescript-app.zip
