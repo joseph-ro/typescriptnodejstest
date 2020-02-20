@@ -9,6 +9,7 @@ phases:
       - chmod +x scripts/dist.sh && scripts/dist.sh
       - ls .
       - ls dist
+      - ls scripts
       - echo "fin commands"
   build:
     commands:
