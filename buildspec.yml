@@ -3,7 +3,7 @@ phases:
   pre_build:
     commands:
       - echo "entered the pre-build phase, building zip file"
-      - sudo chmod +x scripts/dist.sh && sudo scripts/dist.sh
+      - chmod +x scripts/dist.sh && scripts/dist.sh
       - echo "fin commands"
   build:
     commands:
@@ -13,4 +13,4 @@ phases:
     commands:
       - echo "Entered the post-build phase, proceeding to deploy the artifact"
 deploy:
-  artifacts: dist/aws-eb-typescript-app.zip
+  artifacts: dist/pipeline.zip
