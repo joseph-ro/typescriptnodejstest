@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   pre_build:
     commands:
@@ -12,5 +13,6 @@ phases:
   post_build:
     commands:
       - echo "Entered the post-build phase, proceeding to deploy the artifact"
+
 deploy:
-  artifacts: dist/pipeline.zip
+  artifacts: dist/pipelinetest.zip
