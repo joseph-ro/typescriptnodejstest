@@ -8,10 +8,10 @@ phases:
   build:
     commands:
       - echo "Entered the build phase, installing dependencies"
-      - npm install
+      #- npm install
+      - npm install && npm run build && npm run dist && eb deploy
   post_build:
     commands:
       - echo "Entered the post-build phase, proceeding to deploy the artifact"
-      - npm run build
 deploy:
-  artifacts: dist/aws-eb-typescript-app.zip
+  artifacts: dist/pipelinetest.zip
