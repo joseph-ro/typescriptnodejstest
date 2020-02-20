@@ -4,6 +4,8 @@ phases:
   pre_build:
     commands:
       - echo "entered the pre-build phase, building zip file"
+      - npm install
+      - npm run build
       - chmod +x scripts/dist.sh && scripts/dist.sh
       - ls .
       - ls dist
@@ -11,7 +13,6 @@ phases:
   build:
     commands:
       - echo "Entered the build phase, installing dependencies"
-      - npm install
   post_build:
     commands:
       - echo "Entered the post-build phase, proceeding to deploy the artifact"
