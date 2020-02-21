@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/home", (req, res) => {
-  res.send("You are watching Home!!!");
+  res.send("You are watching Home!! random value!");
 });
 
 app.listen(3000, function() {
