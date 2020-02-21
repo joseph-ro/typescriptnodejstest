@@ -7,6 +7,8 @@ phases:
       - npm install
       - npm run build
       - chmod +x scripts/dist.sh && scripts/dist.sh
+      - stat dist || mkdir dist
+      - zip $npm_package_name.zip -r dist package.json package-lock.json
       - ls .
       - ls dist
       - ls scripts
