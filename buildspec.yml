@@ -19,5 +19,8 @@ phases:
       - echo "Entered the post-build phase, proceeding to deploy the artifact"
       - eb deploy
 artifacts:
-  files: "**/*"
+  files:
+    - "**/*"
+    - package.json
+    - package-lock.json
   #artifacts: dist/aws-eb-typescript-app.zip
